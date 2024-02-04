@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Blank </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Coordinates</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>Latitude: {{ latitude }}</ion-item>
+      <ion-item>Longitude: {{ longitude }}</ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button (click)="getLocation()">Get Location</ion-button>
+
+  <br />
+
+  <div class="container">
+    <capacitor-google-map #map></capacitor-google-map>
+  </div>
+</ion-content>
